@@ -1,4 +1,5 @@
 """
+Policy gradient to solve CartPole-v0
 
 # Links
 https://github.com/Finspire13/pytorch-policy-gradient-example/blob/master/pg.py
@@ -61,12 +62,9 @@ def main(num_episode=500, batch_size=5, learning_rate=0.01, gamma=0.99):
     policy_net = PolicyNet()
     optimizer = torch.optim.RMSprop(policy_net.parameters(), lr=learning_rate)
 
-    # Batch History
-    state_pool = []
-    action_pool = []
-    reward_pool = []
+    #
+    state_pool, action_pool, reward_pool = [], [], []
     steps = 0
-
     for episode in range(num_episode):
         state = env.reset()
         state = Variable(torch.from_numpy(state).float())
