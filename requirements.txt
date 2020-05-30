@@ -1,4 +1,5 @@
 black
+box2d-py
 databricks-connect
 flask
 gensim
