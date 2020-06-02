@@ -4,6 +4,9 @@ Policy gradient to solve lunar lander
 # Links
 https://towardsdatascience.com/breaking-down-richard-suttons-policy-gradient-9768602cb63b
 
+# Running a remote jupyter notebook
+ssh -i ~/.ssh/aws/redeemsmart-dev.pem -NfL 8891:localhost:8891 ubuntu@10.5.32.177
+
 """
 from collections import deque
 import gym
